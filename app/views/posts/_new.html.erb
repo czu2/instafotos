@@ -1,0 +1,22 @@
+<div class="mt-5">
+    <%= form_with(model: @post, local: true) do |f| %>
+
+        <div class="container">
+            <h3 class="mb-3">Nuevo Post</h3>
+            <div class='container border bg-light'>
+                <div class="mt-3 mb-3">
+                    <%= f.text_field :image_url, size: "80", placeholder: "URL de la imagen" %>
+                </div>
+
+                <div class="mb-3">
+                    <%= f.text_area :content, size: "79x2", placeholder: "Descripción" %>
+                </div>
+
+                <div class="mb-3">
+                    <%= f.submit "Publicar", class:"btn btn-primary" %>
+                </div>
+            </div>
+        </div>
+
+    <%end%>
+</div>

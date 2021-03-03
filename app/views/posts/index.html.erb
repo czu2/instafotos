@@ -1,0 +1,10 @@
+<%= render 'new' %>
+<hr class="mt-5">
+<% if @posts.nil? %>    <%# <% if @posts.length < 1 %> 
+    <div>
+        <h3>No hay publicaciones aún</h3>
+        <p>Sé el primero!</p>
+    </div>
+<% else %>
+    <%= render 'posts', post:@posts %>
+<%end%>

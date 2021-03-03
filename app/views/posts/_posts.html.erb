@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <h3 class="mb-3">Publicaciones</h3>
+
+    <% @posts.each do |f| %>
+
+        <div class="text-center border mb-3">
+            <div class="pb-3 pt-3">
+                <img src="<%= f.image_url %>" width="450" height="250">
+            </div>
+
+            <div class="card-footer mb-5">
+                <%= f.content %><br>
+                <%= link_to '<h5 class="far fa-trash-alt text-danger"></h5>'.html_safe, post_destroy_path(f.id), method: :delete, data: { confirm: '¿Deseas eliminar este post?' } %> 
+            </div>
+
+        </div>
+
+    <%end%>
+</div>
